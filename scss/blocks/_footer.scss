@@ -1,0 +1,17 @@
+$footer-bg:#111111;
+
+.footer{
+    background-color: $footer-bg;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    &__menu{
+        justify-content: center;
+    }
+    .menu__link:hover{
+        color: $menu-hover-txt-colot;
+        &::before{
+            opacity: 0;
+        }
+    }
+
+}

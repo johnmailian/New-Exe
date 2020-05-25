@@ -1,0 +1,27 @@
+.carousel__item{
+
+    max-width: 150px;
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+
+    img { display: block;
+    width: 100%;
+    opacity: 0.3;
+    transition-duration: 0.5s;
+    transform-origin: opacity;
+    
+    
+    &:hover{
+        opacity: 1;
+    }
+}
+
+
+}
+.client__photo{
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+

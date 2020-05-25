@@ -1,0 +1,41 @@
+$bg-color: #202020;
+$line-color: #2f2f2f;
+
+.clients{
+    background-color: $bg-color;
+    padding-top: 50px;
+    padding-bottom: 80px;
+
+    &__title{
+        font-size: 30px;
+        font-family: "Raleway";
+        color: $white;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 0.933;
+        text-align: center;
+        display: block;
+        
+        &::before{
+            content: '';
+            width: 70px;
+            height: 2px;
+            display: block;
+            background-color: $line-color;
+            left: center;
+            margin: 0 auto;
+            margin-bottom: 30px;;
+        }}
+     &__text{
+        font-size: 14px;
+        font-family: "Roboto";
+        color: $menu-txt-color;
+        line-height: 1.429;
+        text-align: center;
+        max-width: 600px;
+        margin: 25px auto;
+     } 
+    
+    }
+
+

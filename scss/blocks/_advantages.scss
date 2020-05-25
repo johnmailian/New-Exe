@@ -1,0 +1,109 @@
+$circle-bg: #636363;
+$txt-color: #555555;
+.new-shape{
+    fill: $circle-bg;   
+    transition-duration: 0.5s;
+        transition-property: fill; 
+}
+.advantages{
+    &__title{
+    @include visually-hidden()
+    }
+    &__list{
+        padding: 55px 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns:  repeat(auto-fit, minmax(210px, auto));
+        justify-content: space-between;
+        grid-column-gap: 30px;   
+        
+    }
+    &__item{
+        margin: 15px 0;
+        transition-duration: 0.5s;
+        &:hover{
+            .advantages__img{
+                border-color: $second;
+            }
+            .new-shape{
+                fill: $second;   
+            }
+            .advantages__sbtitle{
+                color: $second;
+            }
+            .advantages__text{
+                color: $white;
+            }
+        }
+        
+    }
+    &__img{
+        border: 1px solid $circle-bg;
+        border-radius: 50%;
+        width: 104px;
+        height: 104px;
+        position: relative;
+        transition-duration: 0.5s;
+        transition-property: border-color;    
+    }
+    &__svg{
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+    }
+    &__sbtitle{
+        color: $circle-bg;
+        font-size: 18px;
+        font-family: "Raleway";
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.111;
+        display: inline-block;
+        margin-top: 30px;
+        transition-duration: 0.5s;
+        transition-property: color;
+    }
+    &__text{
+        font-size: 14px;
+        font-family: "Roboto";
+        color: $txt-color;
+        line-height: 1.429;
+        margin-top: 20px;
+        transition-duration: 0.5s;
+        transition-property: color;
+        &::after{
+            content: '';
+            width: 70px;
+            height: 2px;
+            background-color: $second;
+            display: block;
+            margin-top: 25px;
+            position: absolute;
+        }
+    }
+
+}
+
+@media (max-width:700px){
+    .advantages{
+        &__list{
+            padding: 25px 0;
+        }
+        &__item{
+            text-align: center;
+        }
+        &__img{
+            margin:0 auto;
+        }
+}
+}
+
+
+// repeat(auto-fit, minmax(210px, auto)); helps us to make the section responsive as the min with for each element is set to 210px and the auto-fit element helps us to make it responsive
+
+
+
+
+
+  

@@ -1,0 +1,24 @@
+.list{
+    &__element{
+        font-size: 14px;
+        line-height: 1.286;
+        font-family: "Roboto";
+        color: $menu-txt-color;
+        list-style: none;
+        margin-bottom: 25px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 8px;
+            height: 2px;
+            background-color:$second;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    
+}
+
+

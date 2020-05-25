@@ -1,0 +1,56 @@
+$border-color: #ec776b;
+
+.progress{
+    &__name{
+        font-size: 14px;
+        font-family: "Raleway";
+        color:$white;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.429;
+        margin:10px 0;
+    }
+    &__element{
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        padding: 2px;
+        width: 100%;
+    }
+    &__line{
+        background-color: $white;
+        width: 0;
+        height: 5px;
+        position: relative;
+
+       
+    }
+    &__tooltip{
+        background-color: $primery;
+        position: absolute;
+        right: -10px;
+        top: -30px;
+        width: 31px;
+        font-size: 11px;
+        color: $white;
+        font-weight: bold;
+        line-height: 18px;
+        text-align: center;
+        border-radius: 3px;
+        display: none;
+
+        &::before{
+            content: '';
+            border: 5px solid transparent;
+            border-top: 5px solid $primery;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            
+        }
+    }
+}
+
+
+
+  

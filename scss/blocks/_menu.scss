@@ -1,0 +1,55 @@
+
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    
+    &__element{
+        margin-right: 35px;
+    }
+    &__element:last-child{
+        margin-right: 0;
+    }
+    &__link{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $menu-txt-color;
+        display: inline-block;
+        position: relative;
+        transition-duration: 0.5s;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.667;
+    }
+   
+    &__link::before{
+        content: '';
+        width: 8px;
+        height: 2px;
+        background-color:$menu-hover-txt-colot;
+        display: block;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        opacity: 0;
+        transition-duration: 0.5s;
+        transition-property: opacity;
+    }
+    &__link:hover{
+        color: $menu-hover-txt-colot;
+        &::before{
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 765px){
+
+    .menu{
+        &__element{
+            margin-right: 15px;
+        }
+    }
+}
